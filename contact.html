@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Victoria's Portfolio</title>
+      <meta charset = "utf-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+    <nav role = navigation class = "top-nav">
+
+        <ul>
+            <a href = "index.html"><li tabindex = 0>Home</li></a>
+            <a href = "resume.html"><li tabindex = 1>Resume</li></a>
+            <li nav aria-current = page tabindex = 2>Contact Me</li>
+        </ul>
+        <h1>Victoria's Portfolio</h1>
+   </nav>  
+       </nav>
+       <main>
+        <div class = "contact">
+            <h1>Connect With Me</h1>
+            <p>Fill out this form to send me an email</p>
+            <form name = "contact" onsubmit="return validateForm()">
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name"><br><br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name"><br><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label> Phone Number:
+                    (
+                    <input name="phone1" type="tel" pattern="[0-9]{3}" size = "3"/> ) -
+                    <input name="phone2" type="tel" pattern="[0-9]{3}" size = "3"/>
+                    -
+                    <input name="phone3" type="tel" pattern="[0-9]{4}" size = "4"/>
+                </label> <br><br>
+                <label for="message" id="message">Please enter your message below:</label><br><br>
+                <input type="text" id="message" name="message"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p>You can also reach me at</p>
+            <a href = "https://www.linkedin.com/in/victoria-ozymko">www.linkedin.com/in/victoria-ozymko</a>
+         </div>
+       </main>
+       <script src="contact.js"></script>
+   </body>
+</html>

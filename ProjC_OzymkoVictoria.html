@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proj C-LATEST</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <nav role = navigation class = "top-nav">
+    <ul>
+        <a href = "index.html"><li tabindex = 0>Home</li></a>
+        <a href = "resume.html"><li tabindex = 1>Resume</li></a>
+        <a href = "contact.html"><li tabindex = 2>Contact Me</li></a>
+    </ul>
+    <h1>Victoria's Portfolio</h1>
+</nav>      
+  <main class = "proj2">
+  <h1>Shaded Sphere</h1>
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <button type="button" onclick="VBO1toggle()">Gouraud/Phong Shading toggle</button>
+      <button type="button" onclick="blinntoggle()">Phong/Blinn-Phong toggle</button>
+      <button type="button" onclick="lighttoggle()">Light On/Off</button>
+      <br>
+      <p>W/S - Move forwards/backwards, A/D - Strafe left/right, Arrow Keys - Aim camera</p>
+      <p>To switch between the available shading methods, use the labeled buttons above.</p>
+      <p>To change the position of the light source and the colors, use the slider bars below (the labels for the slider bars are to the right of each bar).</p>
+      <p>To turn the light on/off, use the light on/off button.</p>
+      <p>Current Shading: <span id="curr_shade"></span></p>
+    <div class="slidecontainer">
+      <input type="range" min="-30.0" max="30.0" value="0.0" class="slider" id="pos_x">
+      X value for light direction
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="-30.0" max="30.0" value="0.0" class="slider" id="pos_y">
+      Y value for light direction
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="-30.0" max="30.0" value="30.0" class="slider" id="pos_z">
+      Z value for light direction
+    </div>
+    <br> <br>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="amb_r">
+      R value for ambient term   
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="amb_g">
+      G value for ambient term    
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="amb_b">
+      B value for ambient term    
+    </div>
+    <br> <br>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="0.6", step = "0.1", class="slider" id="dif_r">
+      R value for diffuse term    
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="0.0", step = "0.1", class="slider" id="dif_g">
+      G value for diffuse term    
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="0.0", step = "0.1", class="slider" id="dif_b">
+      B value for diffuse term    
+    </div>
+    <br> <br>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="spec_r">
+      R value for specular term   
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="spec_g">
+      G value for specular term   
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="0.0" max="1.0" value="1.0", step = "0.1", class="slider" id="spec_b">
+      B value for specular term   
+    </div>
+    <br> <br>
+</main>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)
+		<script src="../lib/glmatrix.js"></script>
+--> 
+	<script src="VO_VBObox-Lib.js"></script>
+    <script src="ProjC_OzymkoVictoria.js"></script>
+  </body>
+</html>
